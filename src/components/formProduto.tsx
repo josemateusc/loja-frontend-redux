@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-bootstrap";
 import { AppDispatch } from "../redux/store";
 import { addProduto } from "../redux/slices/api.slice.produtos";
+import "./formProduto.css";
 
 export default function FormularioProduto() {
   const dispatch = useDispatch<AppDispatch>();
@@ -25,13 +26,11 @@ export default function FormularioProduto() {
   };
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
+    <div className="formulario-produto">
       <h3 className="mt-3">Inserir Novo Produto</h3>
       <form onSubmit={handleSubmit}>
         <div className="row mb-3">
-          <label className="col-sm-3 col-form-lable">Nome</label>
+          <label className="col-sm-3 col-form-label">Nome</label>
           <div className="col-md-8">
             <input
               type="text"
@@ -44,7 +43,7 @@ export default function FormularioProduto() {
         </div>
 
         <div className="row mb-3">
-          <label className="col-sm-3 col-form-lable">Preço</label>
+          <label className="col-sm-3 col-form-label">Preço</label>
           <div className="col-md-8">
             <input
               type="number"
@@ -57,7 +56,7 @@ export default function FormularioProduto() {
         </div>
 
         <div className="row mb-3">
-          <label className="col-sm-3 col-form-lable">Estoque</label>
+          <label className="col-sm-3 col-form-label">Estoque</label>
           <div className="col-md-8">
             <input
               type="number"
@@ -70,9 +69,9 @@ export default function FormularioProduto() {
         </div>
 
         <div className="row mb-3">
-          <label className="col-sm-3 col-form-lable"></label>
+          <label className="col-sm-3 col-form-label"></label>
           <div className="col-md-1">
-            <button type="submit" className="btn btn-primary bnt-lg">
+            <button type="submit" className="btn btn-primary btn-lg">
               Submit
             </button>
           </div>
