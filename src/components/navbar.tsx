@@ -5,7 +5,7 @@ import { RootState } from "../redux/store";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../redux/slices/api.slice.login";
 import { NavItem, NavLink } from "react-bootstrap";
-import "./navbar.css";
+import "./styles/navbar.css";
 
 export default function NavBarCustom() {
   const navigate = useNavigate();

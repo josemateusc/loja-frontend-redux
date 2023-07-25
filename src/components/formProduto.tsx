@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-bootstrap";
 import { AppDispatch } from "../redux/store";
 import { addProduto } from "../redux/slices/api.slice.produtos";
-import "./formProduto.css";
+import "./styles/formProduto.css";
 
 export default function FormularioProduto() {
   const dispatch = useDispatch<AppDispatch>();
