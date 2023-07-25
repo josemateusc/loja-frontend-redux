@@ -21,7 +21,7 @@ export default function NavBarCustom() {
   return (
     <div>
       <Navbar className="navbar">
-        <div className="navbar-brand">Loja Online</div>
+        <div onClick={() => navigate("/home")} className="navbar-brand">Loja Online</div>
         <div className="navbar-items">
           <NavItem onClick={() => navigate("/home")}>
             <NavLink className="nav-link">Produtos</NavLink>
