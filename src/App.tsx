@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className="container" style={{ justifyContent: "start" }}>
+    <div className="container" style={{ justifyContent: "start" , paddingTop: "60px"}}>
       <div style={{ width: "100%" }}>
         <NavBarCustom />
       </div>
