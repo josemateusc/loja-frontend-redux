@@ -6,6 +6,7 @@ import { addProdutoNome } from "../redux/slices/carrinho.slice";
 import { RootState } from "../redux/store";
 import { Produto } from "../redux/slices/produto.slice";
 import "./styles/listProduto.css";
+import ProductCard from "./ProductCard";
 
 export default function ProdutosList() {
   const dispatch = useDispatch();
@@ -46,20 +47,7 @@ export default function ProdutosList() {
         <div className="grid-cards">
           {produtos.map((produto) => {
             return (
-              <div key={produto.id} className="card">
-              <h4>{produto.nome}</h4>
-              <p>Preço: R$ {produto.preco}</p>
-              <p>Estoque: {produto.estoque}</p>
-              <Button
-                className="btn-add-cart"
-                onClick={() => {
-                  console.log(produto);
-                  inserirCarrinho(produto);
-                }}
-              >
-                Inserir no Carrinho
-              </Button>
-              </div>
+              <ProductCard key={produto.id} produto={produto} inserirCarrinho={inserirCarrinho} />
             );
           })}
         </div>

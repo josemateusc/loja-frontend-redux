@@ -9,13 +9,25 @@ import "./styles/navbar.css";
 
 export default function NavBarCustom() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
 
   const { isAdmin } = useSelector((state: RootState) => state.apiLogin);
-  const dispatch = useDispatch();
+  const { produtos } = useSelector((state: RootState) => state.carrinho);
 
   function Logout() {
     dispatch(logout());
     navigate("/");
+  }
+
+  function quantidadeProduto() {
+    let quant = 0;
+    produtos.forEach(
+      (item) => {
+        quant += item.count;
+      }
+    )
+    return quant;
   }
 
   return (
@@ -29,7 +41,7 @@ export default function NavBarCustom() {
           {/* SE USUARIO ISADMIN MOSTRA OPÇÃO DO CARRINHO */}
           {!isAdmin ? (
             <NavItem onClick={() => navigate("/cart")}>
-              <NavLink className="nav-link">Carrinho</NavLink>
+              <NavLink className="nav-link">Carrinho ({quantidadeProduto()})</NavLink>
             </NavItem>
           ) : null}
           <NavItem onClick={() => Logout()}>

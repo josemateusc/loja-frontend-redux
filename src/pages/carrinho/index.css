@@ -12,3 +12,32 @@ body {
   justify-content: start;
   flex-direction: column;
 }
+
+
+.table {
+  width: 900px;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table td {
+  padding: 8px;
+}
+
+.btn {
+  background-color: #9368c4;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.remove-btn {
+  background-color: red;
+  color: white;
+}
