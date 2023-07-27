@@ -36,7 +36,7 @@ function App() {
             </div>
           ) : null}
 
-          <div style={{ overflow: "scroll", height: "400px" }}>
+          <div style={{ overflow: "scroll", height: "800px" }}>
             <ProdutosList />
           </div>
         </div>
